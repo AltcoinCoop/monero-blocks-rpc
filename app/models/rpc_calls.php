@@ -9,7 +9,7 @@ class Rpc_calls extends \core\model {
 
 		$data = array('id' => '0', 'jsonrpc' => '0');
 		$data_string = json_encode($data);
-		$url = 'http://127.0.0.1:18081/getinfo';
+		$url = 'http://127.0.0.1:24091/getinfo';
 
 		$result = $this->rpc_call($data_string, $url);
 
@@ -22,7 +22,7 @@ class Rpc_calls extends \core\model {
 		$data = array('id' => '0', 'jsonrpc' => '0', 'method' => 'getblockheaderbyhash', 'params' => $params);
 		$data_string = json_encode($data);
 
-		$url = 'http://127.0.0.1:18081/json_rpc';
+		$url = 'http://127.0.0.1:24091/json_rpc';
 		$result = $this->rpc_call($data_string, $url);
 
 		return $result;
@@ -34,7 +34,7 @@ class Rpc_calls extends \core\model {
 		$data = array('id' => '0', 'jsonrpc' => '0', 'method' => 'getblockheaderbyheight', 'params' => $params);
 		$data_string = json_encode($data);
 
-		$url = 'http://127.0.0.1:18081/json_rpc';
+		$url = 'http://127.0.0.1:24091/json_rpc';
 		$result = $this->rpc_call($data_string, $url);
 
 	return $result;
@@ -45,7 +45,7 @@ class Rpc_calls extends \core\model {
 
 		$data = array('id' => '0', 'jsonrpc' => '0');
 		$data_string = json_encode($data);
-		$url = 'http://127.0.0.1:18081/getheight';
+		$url = 'http://127.0.0.1:24091/getheight';
 
 		$result = $this->rpc_call($data_string, $url);
 
@@ -56,7 +56,7 @@ class Rpc_calls extends \core\model {
 
 		$data = array('key_images' => [$key_images]);
                 $data_string = json_encode($data);
-                $url = 'http://127.0.0.1:18081/is_key_image_spent';
+                $url = 'http://127.0.0.1:24091/is_key_image_spent';
 
                 $result = $this->rpc_call($data_string, $url);
 
@@ -68,7 +68,7 @@ class Rpc_calls extends \core\model {
 		$data = array('txs_hashes' => $tx_list);
 		$data_string = json_encode($data);
 
-		$url = 'http://127.0.0.1:18081/gettransactions';
+		$url = 'http://127.0.0.1:24091/gettransactions';
 		$result = $this->rpc_call($data_string, $url);
 
 		return $result;
@@ -78,7 +78,7 @@ class Rpc_calls extends \core\model {
 		$data = array('txs_hashes' => [$param]);
 		$data_string = json_encode($data);
 
-		$url = 'http://127.0.0.1:18081/gettransactions';
+		$url = 'http://127.0.0.1:24091/gettransactions';
 		$result = $this->rpc_call($data_string, $url);
 
 		return $result;
@@ -88,7 +88,7 @@ class Rpc_calls extends \core\model {
 		$data = array('id' => '0', 'jsonrpc' => '0', 'method' => 'getlastblockheader', 'params' => json_decode("{}"));     
 		$data_string = json_encode($data);
 
-		$url = 'http://127.0.0.1:18081/json_rpc';
+		$url = 'http://127.0.0.1:24091/json_rpc';
 		$result = $this->rpc_call($data_string, $url);
 
 		return $result;
@@ -96,7 +96,7 @@ class Rpc_calls extends \core\model {
 
 	public function getBlockInfoByHash($param){
 
-		$url = 'http://127.0.0.1:18081';
+		$url = 'http://127.0.0.1:24091';
 		$result = getBlockInfo($param, $url);
 
 		return $result;
