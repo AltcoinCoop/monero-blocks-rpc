@@ -29,9 +29,9 @@ class Config {
 		//database details ONLY NEEDED IF USING A DATABASE
 		define('DB_TYPE', 'mysql');
 		define('DB_HOST', 'localhost');
-		define('DB_NAME', 'yourdatabase');
-		define('DB_USER', 'youruser');
-		define('DB_PASS', 'yourpass');
+		define('DB_NAME', '');
+		define('DB_USER', '');
+		define('DB_PASS', '');
 		define('PREFIX', '');
 
         //BASE UNIT
